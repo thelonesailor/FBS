@@ -1,3 +1,5 @@
+:- dynamic frame/2.
+
 frame(university, [phone(default, 011686971),address(default, iitDelhi)]).
 frame(department, [a_part_of(university),programme([btech, mtech, ph_d])]).
 frame(hostel, [a_part_of(university), room(default, 100)]).
