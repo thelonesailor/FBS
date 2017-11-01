@@ -12,13 +12,13 @@ Then, you can query the slot values of frames, insert new frames, delete entire 
 
 To insert a new frame with name Fname, parent Pname and list of slot-value pairs L, give the command:
 	
-	:- insertframe(Fname, Pname, L).
+	:- insertframe(Frame_name, Parent_frame_name, List of slot facet pairs).
 
 If the frame already exists, or the parent does not exist, an error will occur.
 
 To delete a frame and its subtree, give the command:
 
-	:- delete(Fname).
+	:- delete(Frame_name).
 
 To update slot S of a frame F with value V, give the command:
 

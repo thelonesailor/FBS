@@ -3,16 +3,16 @@
 %% A network of Frames for a university
 frame(university, [(phone,(default, 011686971)),(address,(default, iitDelhi))]).
 frame(department, [(a_part_of,university),(programme,(btech, mtech, ph_d))]).
-frame(hostel, [(a_part_of,university), (room,(default, 100))]).
-frame(faculty, [(a_part_of,department), (age,(range,25,60)),(nationality,(default, indian)),(qual,(default, postgraduate))]).
+frame(hostel, [(a_part_of,university), (room,(100))]).
+frame(faculty, [(a_part_of,department), (age,(25,60)),(nationality,(default, indian)),(qual,(default, postgraduate))]).
 frame(nilgiri, [(is_a,hostel), (phone,011686234)]).
-frame(science_faculty, [(ako,faculty),(qual,(default, msc))]).
+frame(science_faculty, [(ako,faculty),(qual,(msc))]).
 frame(renuka, [(is_a,science_faculty),(qual,ph_d),(age,45),(address,janakpuri)]).
 
 
 %% Module to insert a frame in network of frames with all slot values filled up
 %% Fname : Frame Name
-%% Pname : Parent Name (Fname will be ako Pname, is_a Pname, or a_part_of Pname)
+%% Pname : Parent Name
 
 %% Case 1: Fname frame alreay present
 insertframe(Fname,_,_):-frame(Fname,_),!,
